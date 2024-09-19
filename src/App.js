@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from '../src/components/Form.jsx';
+import List from '../src/components/List.jsx';
+import Header from '../src/components/Header.jsx';
+import Footer from '../src/components/Footer.jsx';
+import Aside from '../src/components/Aside.jsx';
+import { Provider } from './context/Context.js';
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider>
+      <Header />
+      <main>
+        <Form />
+        <List  />
+        <Aside />
+      </main>
+      <Footer />
+      </Provider>
     </div>
   );
 }
